@@ -68,6 +68,9 @@ configure :build do
   # Enable cache buster
   activate :asset_hash
 
+  # Use Pretty URLs
+  activate :directory_indexes
+
   # Use relative URLs
   # activate :relative_assets
 
