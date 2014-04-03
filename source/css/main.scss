@@ -245,17 +245,21 @@ blockquote {
       background-color: $lightBorderColor;
     }
   }
+
+  &:last-child {
+    margin-top: 50px;
+  }
 }
 
-.work {
+.list-item {
   @include clearfix;
 }
 
-.work-title {
+.item-title {
   float: left;
 }
 
-.work-year {
+.item-year {
   float: right;
   font-family: 'Georgia', serif;
   color: #c1c1c1;
