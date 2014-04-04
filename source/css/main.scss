@@ -82,7 +82,7 @@ blockquote {
   width: $sidebarWidth;
   margin-top: 100px;
 
-  @media screen and (max-width: 590px) {
+  @media screen and (max-width: 930px) {
     float: none;
     width: 100%;
     margin-top: 60px;
@@ -120,7 +120,7 @@ blockquote {
     margin: 0;
     padding: 0;
 
-    @media screen and (max-width: 590px) {
+    @media screen and (max-width: 930px) {
       text-align: center;
     }
   }
@@ -147,7 +147,7 @@ blockquote {
       margin-right: 15px;
     }
 
-    @media screen and (max-width: 590px) {
+    @media screen and (max-width: 930px) {
       display: inline-block;
     }
   }
@@ -164,7 +164,7 @@ blockquote {
     }
   }
 
-  @media screen and (max-width: 590px) {
+  @media screen and (max-width: 930px) {
     text-align: center;
   }
 }
