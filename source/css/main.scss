@@ -1,0 +1,317 @@
+@import 'bourbon/bourbon';
+
+$sidebarWidth:  15%;
+$contentLeftMargin: 5%;
+$contentWidth: 100% - $contentLeftMargin - $sidebarWidth;
+$primaryOrange: #D2635A;
+$lightBorderColor: #f4f4f4;
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font: 1em/1.5 "proxima-nova", sans-serif;
+  color: #111111;
+}
+
+/**
+*
+* Sensible Defaults
+*
+**/
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1140px) {
+    font-size: 1.8em;
+  }
+}
+
+p {
+  font-size: 1.125em;
+  line-height: 1.8em;
+}
+
+a {
+  color: #44f;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+blockquote {
+  background-color: rgba(251, 255, 162, 0.3);
+  font-weight: 100;
+  padding: 1.2em 1.5em;
+  margin: 0;
+
+  a {
+    color: $primaryOrange;
+  }
+}
+
+.site-wrapper {
+  max-width: 1112px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 150px;
+  @include clearfix;
+
+  @media screen and (max-width: 1140px) {
+    margin: 0 2em;
+  }
+}
+
+.site-sidebar {
+  float: left;
+  width: $sidebarWidth;
+  margin-top: 100px;
+
+  @media screen and (max-width: 930px) {
+    float: none;
+    width: 100%;
+    margin-top: 60px;
+  }
+}
+
+.site-content {
+  margin-top: 100px;
+  float: left;
+  margin-left: $contentLeftMargin;
+  width: $contentWidth;
+  padding-right: 14em;
+
+  @media screen and (max-width: 930px) {
+    padding-right: 0;
+    margin-left: 0;
+    margin-top: 60px;
+    width: 100%;
+  }
+}
+
+.site-navigation {
+  opacity: 0.6;
+  -o-transition:.2s;
+  -ms-transition:.2s;
+  -moz-transition:.2s;
+  -webkit-transition:.2s;
+  transition:.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    @media screen and (max-width: 930px) {
+      text-align: center;
+    }
+  }
+
+  li {
+    padding: 5px 0;
+    border-bottom: 1px solid $lightBorderColor;
+
+    a {
+      font-size: 0.875em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #111111;
+      text-decoration: none;
+
+      &:hover {
+        color: $primaryOrange;
+        border-bottom: 1px solid $primaryOrange;
+      }
+    }
+
+    &:first-child {
+      padding-top: 0;
+      margin-right: 15px;
+    }
+
+    @media screen and (max-width: 930px) {
+      display: inline-block;
+    }
+  }
+}
+
+.social-icons {
+  margin-top: 15px;
+
+  a {
+    color: #c1c1c1;
+
+    &:hover {
+      color: #111111;
+    }
+  }
+
+  @media screen and (max-width: 930px) {
+    text-align: center;
+  }
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-size: 13px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.site-intro {
+  margin-bottom: 5em;
+  @include clearfix;
+}
+
+.intro-avatar {
+  float: left;
+  width: 100px;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.intro-text {
+  float: right;
+  width: calc(100% - 100px);
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  padding-left: 1.5em;
+
+  span:last-child {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.list-section {
+
+  h2 {
+    font-weight: 300;
+    font-size: 18px;
+    color: $primaryOrange;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-left: -10px;
+    border-bottom: 1px solid $lightBorderColor;
+
+    &:hover {
+      border-radius: 5px;
+    }
+  }
+
+  a {
+    color: #111111;
+    font-weight: 400;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $lightBorderColor;
+    }
+  }
+
+  &:last-child {
+    margin-top: 50px;
+  }
+}
+
+.list-item {
+  @include clearfix;
+}
+
+.item-title {
+  float: left;
+}
+
+.item-year {
+  float: right;
+  font-family: 'Georgia', serif;
+  color: #c1c1c1;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url('fonts/icons.eot?53532399');
+  src: url('fonts/icons.eot?53532399#iefix') format('embedded-opentype'),
+       url('fonts/icons.woff?53532399') format('woff'),
+       url('fonts/icons.ttf?53532399') format('truetype'),
+       url('fonts/icons.svg?53532399#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In othr OS-es font will be not as sharp as it coueld be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icons';
+    src: url('../font/icons.svg?53532399#icons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons";
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+}
+ 
+.icon-github:before { content: '\e800'; } /* '' */
+.icon-twitter:before { content: '\e801'; } /* '' */
